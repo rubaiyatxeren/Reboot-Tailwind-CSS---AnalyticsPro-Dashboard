@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind CSS Setup</title>
+  <link href="output.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> 
+
+ </head>
+ <body class="bg-gray-50 dark:bg-dark-900 transition-colors duration-300">
+  <nav class="sticky top-0  flex flex-row justify-center items-center p-3 bg-white shadow-lg">
+    <i class="fas fa-chart-line text-primary-500 text-2xl mr-3 ml-8"></i>
+
+    <h1 class="text-xl font-bold  ">AnalyticsPro</h1>
+
+    <ul class="flex gap-8 ml-8 text-sm font-sans">
+    <li class="relative group">
+        <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Dashboard</a>
+        <div class="absolute  left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></div>
+    </li>
+    <li class="relative group">
+      <a class="text-gray-600 hover:text-blue-600 transition-colors duration-300" href="">Analytics</a>
+      <div class="absolute left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></div>
+    </li>
+    <li class="relative group">
+        <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Reports</a>
+        <div class="absolute  left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></div>
+    </li>
+    <li class="relative group">
+        <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Settings</a>
+        <div class="absolute left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></div>
+    </li>
+</ul>
+
+    <div class="flex gap-4 items-center ml-8">
+    <!-- Dark Mode Toggle -->
+    <button class="w-10 h-10 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors">
+        <i class="fas fa-moon text-gray-600"></i>
+    </button>
+    
+    <!-- Notifications -->
+    <button class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-gray-200 transition-colors relative">
+        <i class="fas fa-bell text-gray-600"></i>
+        <span class="absolute -top-1 -right-1 bg-red-500 text-white rounded-full w-4 h-4 text-xs">3</span>
+    </button>
+</div>
+  </nav>
+
+  <section class="py-8">
+    <div class="w-11/12 max-w-[1080px] mx-auto">
+        <!-- Grid Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Card 1 -->
+            <div class="flex items-center gap-4 bg-white border border-gray-200 px-6 py-6 rounded-xl shadow-sm">
+                <div class="bg-blue-100 p-3 rounded-xl">
+                    <i class="fas fa-users text-2xl text-blue-500"></i>
+                </div>
+                <div>
+                    <p class="text-gray-400 text-sm">Total Users</p>
+                    <h4 class="font-bold text-2xl">12,402</h4>
+                    <h5 class="text-green-500 text-sm">12.5% increase</h5>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flex items-center gap-4 bg-white border border-gray-200 px-6 py-6 rounded-xl shadow-sm">
+                <div class="bg-green-100 p-3 rounded-xl">
+                    <i class="fas fa-shopping-cart text-2xl text-green-500"></i>
+                </div>
+                <div>
+                    <p class="text-gray-400 text-sm">Total Revenue</p>
+                    <h4 class="font-bold text-2xl">$48,299</h4>
+                    <h5 class="text-green-500 text-sm">8.2% increase</h5>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flex items-center gap-4 bg-white border border-gray-200 px-6 py-6 rounded-xl shadow-sm">
+                <div class="bg-purple-100 p-3 rounded-xl">
+                    <i class="fas fa-chart-bar text-2xl text-purple-500"></i>
+                </div>
+                <div>
+                    <p class="text-gray-400 text-sm">Conversion Rate</p>
+                    <h4 class="font-bold text-2xl">4.8%</h4>
+                    <h5 class="text-red-500 text-sm">2.1% decrease</h5>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="flex items-center gap-4 bg-white border border-gray-200 px-6 py-6 rounded-xl shadow-sm">
+                <div class="bg-orange-100 p-3 rounded-xl">
+                    <i class="fas fa-clock text-2xl text-orange-500"></i>
+                </div>
+                <div>
+                    <p class="text-gray-400 text-sm">Avg. Session</p>
+                    <h4 class="font-bold text-2xl">4m 32s</h4>
+                    <h5 class="text-green-500 text-sm">15.3% increase</h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section>
+        <div class=" w-10/12 max-w-[1080px] p-4 mx-auto mb-6 border rounded-lg bg-white shadow-md">
+            <div class="flex justify-between"> 
+                <h2 class=" font-black text-[1.1rem] m-3">Revenue Overview</h2>
+
+               <div class="flex gap-1 bg-gray-100 p-1 rounded-full">
+                <button class="px-4 py-2 bg-blue-500 text-white font-medium rounded-full transition-all duration-200">
+                    Monthly
+                </button>
+                <button class="px-4 py-2 text-gray-600 hover:text-blue-600 font-medium rounded-full transition-all duration-200">
+                    Yearly
+                </button>
+                <button class="px-4 py-2 text-gray-600 hover:text-blue-600 font-medium rounded-full transition-all duration-200">
+                    Daily
+                </button>
+            </div>
+            </div>
+
+            <div class="m-5">
+                <div class="bg-indigo-100 h-80 rounded-md flex flex-col items-center justify-center">
+                <i class="fas fa-chart-line text-4xl text-gray-400 mb-4"></i>
+                <p class="text-center text-gray-400">Interactive Chart Component</p>
+           </div>
+        </div>
+    </div>
+</section>
+
+
+    <section class="py-4 m-6">
+    <div class="w-10/12 max-w-[1080px] mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            
+            <!-- Left: Chart Card -->
+            <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+                
+                <div class="h-64 p-6 bg-gradient-to-br from-green-50 to-emerald-100 flex flex-col items-center justify-center">  
+                    <i class="fas fa-chart-pie text-4xl text-green-500 mb-3"></i>
+                    <p class="text-gray-600 text-center">Pie Chart Component</p>
+                </div>
+            </div>
+
+            <!-- Right: Progress Card -->
+            <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
+                <h2 class="font-black text-lg text-gray-800 mb-6">Goals Progress</h2>
+                
+                <div class="space-y-4">
+                    <!-- Progress Item 1 -->
+                    <div>
+                        <div class="flex justify-between text-sm text-gray-600 mb-2">
+                            <span>Monthly Revenue</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-green-500 h-2 rounded-full w-3/4"></div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Item 2 -->
+                    <div>
+                        <div class="flex justify-between text-sm text-gray-600 mb-2">
+                            <span>New Users</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full w-3/5"></div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Item 3 -->
+                    <div>
+                        <div class="flex justify-between text-sm text-gray-600 mb-2">
+                            <span>Customer Satisfaction</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-purple-500 h-2 rounded-full w-9/10"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section class="w-10/12 max-w-[1080px] mx-auto" >
+         <!-- Table Section -->
+        <div class="bg-white dark:bg-dark-800 rounded-xl shadow-sm border border-gray-200 dark:border-dark-700 overflow-hidden mb-8">
+            <div class="px-6 py-4 border-b border-gray-200 dark:border-dark-700">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Recent Transactions</h3>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead class="bg-gray-50 dark:bg-dark-700">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Transaction</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Date</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Amount</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white dark:bg-dark-800 divide-y divide-gray-200 dark:divide-dark-700">
+                        <tr class="hover:bg-gray-50 dark:hover:bg-dark-700 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center mr-3">
+                                        <i class="fas fa-shopping-bag text-blue-600 dark:text-blue-400 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm font-medium text-gray-900 dark:text-white">Premium Plan</div>
+                                        <div class="text-sm text-gray-500 dark:text-gray-400">#ORD-7823</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Jan 15, 2024</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">$299.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400">Completed</span>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 dark:hover:bg-dark-700 transition-colors">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-orange-100 dark:bg-orange-900/20 rounded-lg flex items-center justify-center mr-3">
+                                        <i class="fas fa-mobile-alt text-orange-600 dark:text-orange-400 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm font-medium text-gray-900 dark:text-white">Mobile App</div>
+                                        <div class="text-sm text-gray-500 dark:text-gray-400">#ORD-7824</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">Jan 14, 2024</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">$199.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400">Pending</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="w-10/12 max-w-[1080px] mx-auto m-8">
+        <div class="bg-white rounded-xl shadow-sm border overflow-hidden">
+            <div class="px-6 py-4 border-gray-200 border-b">
+                <h2 class="text-lg font-semibold text-gray-900">Recent Transactions</h2>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead class="bg-gray-50 dark:bg-dark-700">
+                        <tr>
+                        <th class="uppercase text-xs font-medium text-gray-500 text-left px-6 py-3 tracking-wider">Transaction</th>
+                        <th class="uppercase text-xs font-medium text-gray-500 text-left px-6 py-3 tracking-wider">Date</th>
+                        <th class="uppercase text-xs font-medium text-gray-500 text-left px-6 py-3 tracking-wider">Amount</th>
+                        <th class="uppercase text-xs font-medium text-gray-500 text-left px-6 py-3 tracking-wider">Status</th>
+                    </tr>
+                    </thead>
+
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="flex items-center">
+                                    <div class="bg-blue-100 w-8 h-8 flex items-center justify-center mr-3 rounded-lg">
+                                        <i class="fas fa-shopping-bag text-blue"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm font-medium text-gray-900 dark:text-white">Premium Plan</div>
+                                        <div class="text-sm text-gray-500 dark:text-gray-400">#ORD-7823</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-sm whitespace-nowrap text-gray-600">
+                                Jan 15, 2024
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                                $299.00
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="bg-green-100  text-green-800 rounded-full font-semibold text-xs p-3">Completed</span>
+                                <i class="fa-regular fa-circle-check "></i>
+                            </td>
+                        </tr>
+
+                         <tr class="">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="flex items-center">
+                                    <div class="bg-orange-100 w-8 h-8 flex items-center justify-center mr-3 rounded-lg">
+                                        <i class="fas fa-mobile-alt text-orange-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm font-medium text-gray-900 dark:text-white">Mobile App</div>
+                                        <div class="text-sm text-gray-500 dark:text-gray-400">#ORD-7824</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 text-sm whitespace-nowrap text-gray-600">
+                                $199.00
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                                $599.00
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="bg-red-100  text-red-800 rounded-full font-semibold text-xs p-3">Cancelled</span>
+                                <i class="fa-regular fa-circle-check "></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </section>
+
+ </body>
+</html>
